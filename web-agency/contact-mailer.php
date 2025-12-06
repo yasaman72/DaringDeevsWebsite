@@ -6,15 +6,13 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 if($_POST)
 {
-
-
     require_once "PHPMailer/Exception.php";
     require_once "PHPMailer/PHPMailer.php";
     require_once "PHPMailer/SMTP.php";
 
     $mail = new PHPMailer();
 
-    $your_email = "youremail@website.com";
+    $your_email = "daringdeevs@gmail.com";
 
 
     //check if its an ajax request, exit if not

@@ -1147,7 +1147,7 @@ figure.about-image.hover .curl {
 }
 
 .team-sec .team-classic-content {
-    padding: 45px 20px;
+    padding: 25px 20px;
     background: transparent;
     text-align: center;
 }
@@ -1162,12 +1162,11 @@ figure.about-image.hover .curl {
 
 .team-classic-content p {
     font-size: 16px;
-
 }
 
 /*Hover for team1 and team 3*/
 .team-sec .hvr-team {
-    display: inline-block;
+    display: flexbox;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
