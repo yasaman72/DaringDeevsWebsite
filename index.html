@@ -24,6 +24,16 @@
     <!-- Style Sheet -->
     <link href="web-agency/css/style.css" rel="stylesheet">
     <link href="web-agency/css/custom.css" rel="stylesheet">
+    <script>
+        (function () {
+            var path = window.location.pathname;
+            if (/\/index\.html$/.test(path)) {
+                var cleanPath = path.replace(/index\.html$/, "");
+                if (cleanPath === "") cleanPath = "/";
+                window.history.replaceState(null, "", cleanPath + window.location.search + window.location.hash);
+            }
+        })();
+    </script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -61,7 +71,7 @@
                     </div>
                     <div class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
                         <div class="logo-center">
-                            <a href="index-web-agency.html">
+                            <a href="/">
                                 <img src="web-agency/img/logo.png" alt="LOGO IMAGE"></a>
                         </div>
                     </div>
@@ -69,9 +79,9 @@
                         <div class="banner-icons mt-2 mr-2">
                             <a href="https://x.com/daringdeevs" target="_blank"><i class="fab fa-x-twitter"></i></a>
                             <a href="https://www.linkedin.com/company/daringdeevs/" target="_blank"><i
-                                    class="lab la-linkedin-in"></i></a>
+                                    class="fab fa-linkedin-in"></i></a>
                             <a href="https://www.instagram.com/daringdeevs/" target="_blank"><i
-                                    class="lab la-instagram"></i></a>
+                                    class="fab fa-instagram"></i></a>
                             <a href="https://bsky.app/profile/daringdeevs.bsky.social" target="_blank"><i
                                     class="fab fa-bluesky"></i></a>
                             <a href="https://www.youtube.com/@daringdeevs" target="_blank"><i
