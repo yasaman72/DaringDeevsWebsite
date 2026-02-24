@@ -1,1 +1,84 @@
 /*-- Use For Custom Styling --*/
+
+/* Keep ConvertKit sticky bar above site UI layers */
+.formkit-sticky-bar,
+[id*="formkit-sticky-bar"],
+[class*="formkit-sticky-bar"] {
+  z-index: 100000 !important;
+}
+
+/* Team section: stabilize card layout across breakpoints */
+.team-sec .team-col,
+.team-sec .team-col2 {
+  margin-bottom: 24px;
+}
+
+/* Remove nested row gutters that cause misalignment/overflow in alternating cards */
+.team-sec .team-col2 > .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.team-sec .team-col2 > .row > [class*="col-"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Keep role blocks visually balanced even when title lengths differ */
+.team-sec .team-classic-content h5 {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1199px) {
+  .team-sec .team {
+    justify-content: center;
+  }
+
+  .team-sec .team-col,
+  .team-sec .team-col2 {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .team-sec .team {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .team-sec .team-col,
+  .team-sec .team-col2 {
+    max-width: 360px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+  }
+
+  .team-sec .team-classic-content {
+    padding: 24px 16px;
+  }
+
+  .team-sec .team-classic-content h5 {
+    min-height: 0;
+  }
+}
+
+/* Keep header logo centered on tablet/mobile */
+@media (max-width: 991px) {
+  .logo-center {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .logo-center img {
+    display: block;
+    margin: 0 auto;
+  }
+}
