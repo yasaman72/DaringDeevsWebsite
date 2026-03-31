@@ -1,25 +1,10 @@
 /*-- Use For Custom Styling --*/
 
-/* ConvertKit sticky bar styling */
+/* Keep ConvertKit sticky bar above site UI layers */
 .formkit-sticky-bar,
 [id*="formkit-sticky-bar"],
 [class*="formkit-sticky-bar"] {
   z-index: 100000 !important;
-  position: fixed !important;
-}
-
-/* Add top padding to body when ConvertKit banner is visible to prevent overlap */
-body:has(.formkit-sticky-bar),
-body:has([class*="formkit-sticky-bar"]) {
-  padding-top: 120px;
-}
-
-/* Adjust for smaller screens */
-@media (max-width: 768px) {
-  body:has(.formkit-sticky-bar),
-  body:has([class*="formkit-sticky-bar"]) {
-    padding-top: 80px;
-  }
 }
 
 /* Team section: stabilize card layout across breakpoints */
@@ -142,6 +127,43 @@ body:has([class*="formkit-sticky-bar"]) {
   }
 }
 
+/* Reposition fixed nav to bottom left */
+.fixed-nav-on-scroll {
+  top: auto !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  border-radius: 0 120px 0 0 !important;
+  animation: 1s fadeInLeft;
+}
+
+.fixed-nav-on-scroll .fixed-icon-scroll {
+  top: 20%;
+  left: 10%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 70%;
+}
+
+.btn_sideNavClose{
+  top: auto !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  left: auto !important;
+  border-radius: 120px 0 0 0 !important;
+  animation: 1s fadeInLeft;
+}
+
+.btn_sideNavClose .menu_bars2{
+  top: 40%;
+  left: 40%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Keep header logo centered on tablet/mobile */
 @media (max-width: 991px) {
   .logo-center {
@@ -156,4 +178,11 @@ body:has([class*="formkit-sticky-bar"]) {
     display: block;
     margin: 0 auto;
   }
+}
+
+/* Position quarter circle (close button) on the right side of the side menu */
+.side-menu .quarter-circle {
+  right: 0;
+  left: auto;
+  border-radius: 0 120px 0 0;
 }

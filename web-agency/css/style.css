@@ -2630,7 +2630,7 @@ figure.about-image.hover .curl {
         top: 0;
     }
     .menu_bars span:nth-child(2) {
-        margin: 3px auto;
+        margin: 3px 0px;
     }
     .menu_bars span:nth-child(1),.menu_bars span:nth-child(2),.menu_bars span:nth-child(3) {
         width: 25px;
